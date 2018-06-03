@@ -1,0 +1,165 @@
+//  ----- NAO COPIAR NADA DESSE BLOCO ----- \\
+$gray-darker: lighten(#222, 13.5%); // #222
+$gray-dark: lighten(#222, 20%);   // #333
+$gray: lighten(#222, 33.5%); // #555
+$gray-light: lighten(#222, 60%);   // #999
+$gray-lighter: lighten(#222, 93.5%); // #eee
+
+$brand-primary: #DA251C;
+$mst-green: darkgreen;
+$mst-red: #961913;
+$mst-light-gray: #e3e2e2;
+$mst-medium-gray: #A3A3AB;
+$mst-dark-gray: #555;
+$body-bg: white;
+
+$link-hover-color: lighten($mst-green, 5%);
+$link-color: $mst-green;
+
+$text-color: $gray-dark;
+$font-size-base: 16px;
+
+$font-family-base: 'Helvetica', Arial, sans-serif;
+
+$line-height-base: 1.428571429;
+
+$padding-mobile: 5%;
+
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 1090px;
+$screen-big: 1400px;
+
+/* breakpoints */
+
+$desktop: new-breakpoint(min-width $screen-sm);
+$tablet: new-breakpoint(min-width $screen-sm);
+$mobile: new-breakpoint(max-width $screen-sm);
+
+$home_screen_big: 65%;
+$home_screen_medium: 85%;
+$home_screen_small: 100%;
+
+$border: 1px solid #ddd;
+$border-flat: 2px dotted #999;
+
+@charset "UTF-8";
+$golden:           1.618;
+
+$column: modular-scale(3, 1em, $golden) !default;
+
+
+$gutter: modular-scale(1, 1em, $golden) !default;
+
+
+$grid-columns: 12 !default;
+
+$max-width: 1200px !default;
+
+
+$border-box-sizing: true !default;
+
+
+$default-feature: min-width; // Default @media feature for the breakpoint() mixin
+
+
+$default-layout-direction: LTR !default;
+
+
+@mixin media($query: $feature $value $columns, $total-columns: $grid-columns) {
+  @if length($query) == 1 {
+    @media screen and ($default-feature: nth($query, 1)) {
+      $default-grid-columns: $grid-columns;
+      $grid-columns: $total-columns !global;
+      @content;
+      $grid-columns: $default-grid-columns !global;
+    }
+  } @else {
+    $loop-to: length($query);
+    $media-query: "screen and ";
+    $default-grid-columns: $grid-columns;
+    $grid-columns: $total-columns !global;
+
+    @if is-not(is-even(length($query))) {
+      $grid-columns: nth($query, $loop-to) !global;
+      $loop-to: $loop-to - 1;
+    }
+
+    $i: 1;
+    @while $i <= $loop-to {
+      $media-query: $media-query + "(" + nth($query, $i) + ": " + nth($query, $i + 1) + ") ";
+
+      @if ($i + 1) != $loop-to {
+        $media-query: $media-query + "and ";
+      }
+
+      $i: $i + 2;
+    }
+
+    @media #{$media-query} {
+      @content;
+      $grid-columns: $default-grid-columns !global;
+    }
+  }
+}
+
+//  ----- FIM DO BLOCO QUE NAO PODE COPIAR -----\\
+
+// @import "../_sass/variables";
+// @import "../_sass/_includes/mixins";
+
+*{
+    box-sizing: border-box;
+}
+.especial-saude{
+    background-color: #FFFFFF;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    // overflow: hidden;
+    
+}
+
+.main-picture .logo-chamada  {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-between;
+}
+
+
+ .main-picture .descricao {
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+    letter-spacing: 2px;
+    line-height: 2;
+    padding: 0 25px;
+    font-size: 20px;
+    text-align: justify;
+    align-self: center;
+}
+
+.cards{
+    background-color: #f8cb3e;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-shadow: inset 0px 1px 0px 0px #000;
+
+}
+
+.youtube-playlist {
+    background-color: #ec9f4a;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-shadow: inset 0px 1px 0px 0px #000;
+}
