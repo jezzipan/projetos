@@ -8,7 +8,7 @@
   min-height: 100vh;
   margin: 0; }
 
-.main-picture .logo-chamada .cards-img {
+.main-picture .logo-chamada {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -27,17 +27,21 @@
   text-align: justify;
   align-self: center; }
 
-.cards {
-  background: url("//farm2.staticflickr.com/1748/41843235544_f0a9e681c2_n.jpg") right bottom no-repeat url("//farm2.staticflickr.com/1760/28691917928_63d380b99b_n.jpg") left top repeat;
-  background-repeat: no-repeat;
-  background-size: 50px, 130px, auto;
+.container .cards {
   width: 100vw;
   height: 80vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 15px;
   box-shadow: inset 0px 1px 0px 0px #000; }
+
+.lateral-img {
+  max-width: 30vw;
+  max-height: 60vh; }
+
+.imagem-chamada {
+  width: 100vw;
+  max-height: 90vh; }
 
 .youtube-playlist {
   background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
@@ -50,5 +54,23 @@
   align-items: center;
   padding: 15px;
   box-shadow: inset 0px 1px 0px 0px #000; }
+
+.album-de-fotos-saude {
+  background-color: #E1D7CC;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 15px; }
+
+.title {
+  font-size: 2.7em;
+  margin: 0; }
+
+figcaption {
+  font-style: italic;
+  margin: 1%; }
 
 /*# sourceMappingURL=style.css.map */
