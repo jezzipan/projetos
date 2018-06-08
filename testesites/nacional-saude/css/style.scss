@@ -131,34 +131,40 @@ h1 {
   font-family: SaudeFonte;
   font-size: 4em;
 } 
-
-.frase{
-  font-family: DescricaoSaude;
-  font-size: 1.7em;
-  width: 50%;
-  text-align: justify;
-} 
+ 
 .main-picture .logo-chamada {
-    display: flex;
-    align-items: flex-start;
-    justify-content:space-between;
-    width: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0px 1px 0px 0px #000;
 }
 
  .main-picture .descricao {
-    max-width: 500px;
-    letter-spacing: 2px;
+    max-width: 50%;
+    letter-spacing: 3px;
     line-height: 2;
     padding: 0 25px;
-    font-size: 12px;
+    font-size: 15px;
     text-align: justify;
 }
 
+.main-picture .pachamama{
+  display: block;
+  background-image: url("//farm2.staticflickr.com/1738/40867623000_14f36b45fa_b.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  max-height: 640px;
+  width: 40vw;
+  max-width: 580px;
+}
 .cards{
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: inset 0px 1px 0px 0px #000;
     }
 
   .escrito{
@@ -187,11 +193,12 @@ h1 {
 }
 
 .infographic {
-  box-shadow: inset 0px 1px 0px 0px #000;   
+  box-shadow: inset 0px 1px 0px 0px #000;  
+  width: 100vw; 
 }
 
 .imagem-chamada{
-  width: 100vw;
+  width: 50%;
 }
 
 .youtube-playlist {
@@ -226,8 +233,17 @@ h1 {
 .title{
   font-size: 2.7em;
   margin: 0;
+  color: #7152a5;
+  text-transform: uppercase; 
 }
 figcaption {
   font-style: italic;
   margin: 1%;
+}
+
+.encontro-nacional{
+  font-family: SaudeFonte;
+  font-size: 1.7em;
+  width: 50%;
+  text-align: justify;
 }
