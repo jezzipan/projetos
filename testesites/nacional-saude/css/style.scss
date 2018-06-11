@@ -120,12 +120,12 @@ $default-layout-direction: LTR !default;
 // }
 
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .especial-saude{
-    background-color: #FFFFFF;
-    margin: 0;
-    // overflow: hidden;    
+  background-color: #FFFFFF;
+  margin: 0;
+  // overflow: hidden;    
 }
 h1 {
   font-family: SaudeFonte;
@@ -134,67 +134,81 @@ h1 {
  
 .main-picture .logo-chamada {
   width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+}
+
+.capa{
+  width: 100%;
+  background-image: url(/assets/img/nacional-saude/pachamaminha.png);
+  background-repeat: no-repeat; 
+  background-size: contain;
+
+}
+
+.capapai{
+  height: 100%;
+  flex: 1 0 30%;
+  display: flex;}
+
+.pai{
+  flex-basis: 50%;
   display: flex;
   flex-direction: column;
-  box-shadow: inset 0px 1px 0px 0px #000;
+  align-items: center;
 }
 
  .main-picture .descricao {
-    max-width: 50%;
-    letter-spacing: 3px;
-    line-height: 2;
-    padding: 0 25px;
-    font-size: 15px;
-    text-align: justify;
+  display: flex;
+  max-width: 50%;
+  letter-spacing: 3px;
+  line-height: 2;
+  padding: 0 25px;
+  font-size: 15px;
+  text-align: justify;
 }
 
-.main-picture .pachamama{
-  display: block;
-  background-image: url("//farm2.staticflickr.com/1738/40867623000_14f36b45fa_b.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  max-height: 640px;
-  width: 40vw;
-  max-width: 580px;
-}
 .cards{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: inset 0px 1px 0px 0px #000;
-    }
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0;
+  }
 
-  .escrito{
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
-  }
-  .imagem-apoio{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    width: 100vw;
-  }
-  .title{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
+.escrito{
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+}
+.imagem-apoio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100vw;
+}
+.title{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .lateral-img{
   width: 100%;
-  max-width: 200px;  
+  max-width: 200px; 
 }
+  
 
-.infographic {
-  box-shadow: inset 0px 1px 0px 0px #000;  
+.infographic {  
   width: 100vw; 
+  min-height: 80vh;
+  padding: 20px 0;
 }
 
 .imagem-chamada{
@@ -202,18 +216,17 @@ h1 {
 }
 
 .youtube-playlist {
-    background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    box-shadow: inset 0px 1px 0px 0px #000; 
+  background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px; 
   }
 
 .album-de-fotos-saude {
@@ -227,8 +240,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin-top: 15px;
-  box-shadow: inset 0px 1px 0px 0px #000; 
+  margin-top: 15px; 
 }
 .title{
   font-size: 2.7em;
