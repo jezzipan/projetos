@@ -13,6 +13,10 @@ h1 {
   font-family: SaudeFonte;
   font-size: 4em; }
 
+.main-picture {
+  display: flex;
+  flex-direction: column; }
+
 .main-picture .logo-chamada {
   width: 100vw;
   height: 100vh;
@@ -22,17 +26,21 @@ h1 {
 
 .capa {
   width: 100%;
+  height: 100%;
   background-image: url(/assets/img/nacional-saude/pachamaminha.png);
   background-repeat: no-repeat;
   background-size: contain; }
 
 .capapai {
-  height: 100%;
+  height: 95%;
   flex: 1 0 30%;
   display: flex; }
 
+.paragraph {
+  max-width: 500px; }
+
 .pai {
-  flex-basis: 50%;
+  flex-basis: 60%;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -83,7 +91,7 @@ h1 {
   padding: 20px 0; }
 
 .imagem-chamada {
-  width: 50%; }
+  width: 80%; }
 
 .youtube-playlist {
   background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
