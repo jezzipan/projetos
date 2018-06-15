@@ -160,10 +160,11 @@ h1 {
 }
 
 .paragraph {
-  max-width: 500px;
+  max-width: 600px;
+  font-family: helvetica;
 }
 
-.pai{
+.imagem-paragrafos{
   flex-basis: 60%;
   display: flex;
   flex-direction: column;
@@ -199,6 +200,7 @@ h1 {
   justify-content: space-between;
   align-items: center; 
   width: 100vw;
+  overflow: hidden;
 }
 .title{
   width: 100vw;
@@ -212,9 +214,18 @@ h1 {
 .lateral-img{
   width: 100%;
   max-width: 200px; 
+  transform: translate(0, 100%);
+  opacity: 0.1;
+  transition-property: transform, opacity;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+}
+
+.efeito {
+  transform: translate(0,0);
+  opacity: 1;
 }
   
-
 .infographic {  
   width: 100vw; 
   min-height: 80vh;
@@ -259,6 +270,7 @@ h1 {
   text-transform: uppercase; 
 }
 figcaption {
+  max-width: 700px; 
   font-style: italic;
   margin: 1%;
 }
@@ -269,3 +281,5 @@ figcaption {
   width: 50%;
   text-align: justify;
 }
+
+
