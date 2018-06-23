@@ -108,75 +108,49 @@ $default-layout-direction: LTR !default;
 // @import "../_sass/variables";
 // @import "../_sass/_includes/mixins";
 
-.responsive-image .terrinha-jornada .main-picture {
-  background-image: url(//farm1.staticflickr.com/971/42311116291_0a2b3e8fe4_b.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+@font-face {
+  font-family: SemTerrinhaFonte;
+  src: url(/assets/fonts/Letters\ for\ Learners.ttf);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.sem-terrinha{
+  background-color: #FFFFFF;
+  margin: 0;
+  font-family: SemTerrinhaFonte;
+  font-size: 1.7em;
+  // overflow: hidden;    
+}
+
+.main-picture{
+  display: flex;
+  flex-direction: column;
+}
+ 
+.main-picture .sky-mst {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
-
-  @include media($desktop){
-    justify-content: space-between;
-  }
+  justify-content: space-around;
+  align-items: center;  
+  background-image: url(/assets/img/sem-terrinha/ceu.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 
-.terrinha-jornada .responsive-image {
-  width: auto;
-  align-self: flex-end;
+.kids{
+  width: 50%;
+  height: 50%;
+}
+.nuvem, .sol, .pipa, .crianca-bandeira {
+  width: 20vw;
 }
 
-.terrinha-jornada .responsive-image.terrinha-jornada {
-  // display: none;
-
-  @include media($desktop){
-    display: block;
-    background-image: url(/assets/img/sem-terrinha/casas.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    max-height: 640px;
-    width: 40vw;
-    max-width: 580px;
- }
-}
-
-.terrinha-jornada .responsive-image.logo-center {
-  width: 100%;
-  align-self: center;
-  max-width: 500px;
-  background-color: #000000;
-
-  @include media($desktop){
-    width: auto;
-    margin: 80px;
-    align-self: flex-start;
-  }
-}
-
-#special.terrinha-jornada #information {
-  font-size: 1.7em;
-  padding: 0;
- 
-
-  .content {
-    justify-content: center;
-  }
-
-  .content span {
-    text-shadow: 1px 2px 1px #000000;
-    font-family: 'Exo 2';
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 1.1em;
-    align-self: center;
-  }
-}
-
-.terrinha-jornada #description {
+.main-picture #description{
   margin-top: 30px;
 
   .content p {
@@ -185,20 +159,132 @@ $default-layout-direction: LTR !default;
   }
 }
 
-.terrinha-jornada .youtube-playlist {
-  background-color: #111;
+
+.description {
+  max-width: 600px;
   width: 100vw;
+  height: 100vh;
+  color: #555;
+  font-weight: 300;
+  padding: 10px;
+  font-size: 1.3em;
   display: flex;
-  justify-content: space-around; //ver isso//
-  align-items: center;
-  padding: 15px;
+
 }
 
-.terrinha-jornada .album-de-fotos {
-  background-color: #111;
+.youtube-playlist {
+  background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px; 
+  }
+
+.album-de-fotos-kids {
+  background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  margin-top: 15px;
+  margin-top: 15px; 
 }
+
+
+
+
+
+
+
+
+
+
+
+.capapai{
+  height: 100%;
+  flex: 1 0 30%;
+  display: flex;
+}
+
+
+
+.imagem-paragrafos{
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .main-picture .descricao {
+  display: flex;
+  max-width: 50%;
+  letter-spacing: 3px;
+  line-height: 2;
+  padding: 0 25px;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.cards{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0;
+  }
+
+.escrito{
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+}
+.imagem-apoio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100vw;
+  overflow: hidden;
+}
+.title{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lateral-img{
+  width: 100%;
+  max-width: 200px; 
+}
+
+.imagem-chamada{
+  width: 80%;
+}
+
+.header-title{
+  font-size: 2.7em;
+  margin: 0;
+  color: #555;
+  text-transform: uppercase; 
+}
+figcaption {
+  max-width: 700px; 
+  font-style: italic;
+  margin: 1%;
+}
+
+
+
