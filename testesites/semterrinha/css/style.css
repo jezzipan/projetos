@@ -33,28 +33,27 @@
 .nuvem, .sol, .pipa, .crianca-bandeira {
   width: 20vw; }
 
-.main-picture #description {
-  margin-top: 30px; }
-  .main-picture #description .content p {
-    line-height: 1.6;
-    margin-bottom: 20px; }
+.content {
+  max-width: 600px;
+  margin: 0 auto; }
 
 .description {
-  max-width: 600px;
   width: 100vw;
   height: 100vh;
   color: #555;
   font-weight: 300;
   padding: 10px;
   font-size: 1.3em;
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .youtube-playlist {
-  background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
+  background-image: url("//farm1.staticflickr.com/895/42072540545_2761b4df11_b.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -63,7 +62,7 @@
   padding: 15px; }
 
 .album-de-fotos-kids {
-  background-image: url("//farm2.staticflickr.com/1742/41842996424_aec5254744_b.jpg");
+  background-image: url("//farm1.staticflickr.com/895/42072540545_2761b4df11_b.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,26 +74,6 @@
   padding: 20px;
   margin-top: 15px; }
 
-.capapai {
-  height: 100%;
-  flex: 1 0 30%;
-  display: flex; }
-
-.imagem-paragrafos {
-  flex-basis: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.main-picture .descricao {
-  display: flex;
-  max-width: 50%;
-  letter-spacing: 3px;
-  line-height: 2;
-  padding: 0 25px;
-  font-size: 15px;
-  text-align: justify; }
-
 .cards {
   width: 100vw;
   display: flex;
@@ -102,43 +81,22 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px 0; }
-
-.escrito {
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
-
-.imagem-apoio {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  overflow: hidden; }
-
-.title {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  align-items: center; }
-
-.lateral-img {
-  width: 100%;
-  max-width: 200px; }
-
-.imagem-chamada {
-  width: 80%; }
+  .cards .escrito {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .cards .imagem-apoio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden; }
 
 .header-title {
   font-size: 2.7em;
   margin: 0;
   color: #555;
-  text-transform: uppercase; }
-
-figcaption {
-  max-width: 700px;
-  font-style: italic;
-  margin: 1%; }
+  text-transform: uppercase;
+  border-bottom: 1px solid #aeaeae; }
 
 /*# sourceMappingURL=style.css.map */
