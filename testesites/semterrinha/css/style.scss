@@ -220,7 +220,8 @@ $default-layout-direction: LTR !default;
 }
 
 .especial-criancas__imagem{
-  
+  @include media($screen-sm) {
+
 }
 .content{
   max-width: 600px;
