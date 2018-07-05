@@ -1,42 +1,173 @@
-/*
-Error: Invalid CSS after "// }": expected "}", was ""
-        on line 370 of style.scss
+/* breakpoints */
+@font-face {
+  font-family: SemTerrinhaFonte;
+  src: url(/assets/fonts/Letters_for_learners.ttf); }
+@font-face {
+  font-family: SemTerrinhaTituloFonte;
+  src: url(/assets/fonts/Huruf_Miranti.ttf); }
+* {
+  box-sizing: border-box; }
 
-365: // figcaption {
-366: //   max-width: 700px; 
-367: //   font-style: italic;
-368: //   margin: 1%;
-369: // }
+.sem-terrinha {
+  background-color: #FFFFFF;
+  margin: 0;
+  font-family: SemTerrinhaFonte;
+  font-size: 1.7em; }
 
-Backtrace:
-style.scss:370
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1278:in `expected'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1208:in `expected'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1203:in `tok!'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:679:in `block'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:670:in `ruleset'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:696:in `block_child'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:689:in `block_contents'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:137:in `stylesheet'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:41:in `parse'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:414:in `_to_tree'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:294:in `watch'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin.rb:109:in `method_missing'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:52:in `parse'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:19:in `parse!'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:22:in `load'
-/usr/local/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"// }\": expected \"}\", was \"\"\A         on line 370 of style.scss\A \A 365: // figcaption {\A 366: //   max-width: 700px; \A 367: //   font-style: italic;\A 368: //   margin: 1%;\A 369: // }"; }
+.main-picture {
+  display: flex;
+  flex-direction: column; }
+
+.especial-criancas__capa {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(/assets/img/sem-terrinha/ceu.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.especial-criancas__titulo {
+  font-family: SemTerrinhaTituloFonte;
+  z-index: 1000;
+  max-width: 600px; }
+  .especial-criancas__titulo h1 {
+    text-transform: uppercase;
+    font-size: 45px;
+    margin: 0;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #CC221A; }
+  .especial-criancas__titulo h2 {
+    font-size: 38px;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #007149; }
+  .especial-criancas__titulo h3 {
+    font-size: 33px;
+    border-top: 1px solid black;
+    margin-top: 10px;
+    padding-top: 10px;
+    letter-spacing: 3px;
+    color: #4b4b4d; }
+
+.nuvem {
+  position: absolute; }
+  .nuvem-grande {
+    top: 50px;
+    left: 50px;
+    width: 200px; }
+  .nuvem-media {
+    top: 200px;
+    left: 120px;
+    width: 100px; }
+  .nuvem-menor {
+    top: 170px;
+    left: 20px;
+    width: 80px; }
+
+.sol {
+  position: absolute;
+  right: 10px;
+  width: 200px;
+  top: 10px; }
+
+.kids {
+  width: 50%;
+  height: 50%; }
+
+.acampamento {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 300px; }
+
+.criancas_mst {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 300px; }
+
+.pipa {
+  width: 100px;
+  position: absolute;
+  right: 350px;
+  bottom: 405px; }
+
+.content {
+  max-width: 600px;
+  margin: 0 auto; }
+
+.description {
+  width: 100vw;
+  height: 100vh;
+  color: #555;
+  font-weight: 300;
+  padding: 10px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center; }
+
+.youtube-playlist {
+  background-image: url("https://farm4.staticflickr.com/3726/10420515913_74c801a0b4_b.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px; }
+
+.album-de-fotos-kids {
+  background-image: url("//farm1.staticflickr.com/895/42072540545_2761b4df11_b.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 15px; }
+
+.cards {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0; }
+  .cards .escrito {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .cards .imagem-apoio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden; }
+
+.lateral-img {
+  width: 20%; }
+
+.header-title {
+  font-size: 2.7em;
+  margin: 0;
+  color: #555;
+  text-transform: uppercase;
+  border-bottom: 1px solid #aeaeae; }
+
+.card-campanha {
+  width: 50vw; }
+
+/*# sourceMappingURL=style.css.map */
